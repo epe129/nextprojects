@@ -1,0 +1,46 @@
+.div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 270px;
+    width: 60%;
+    background-color: black;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+
+.h1 {
+    color: white;
+    text-align: center;
+}
+
+.form {
+    text-align: center;
+}
+
+.submit {
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border: 0px;
+    background-color: rgb(32, 109, 168);
+    color: white;
+    cursor: pointer;
+}
+
+.link {
+    color: white;
+    border: none;
+    font-size: 1.75rem;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.link:hover {
+    background-color: rgb(83, 83, 83);
+    border-radius: 5px;
+    padding: 5px;
+
+}
