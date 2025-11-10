@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 export default function blogs() {
   const [message, setMessage] = useState("");
+  let text = ""
 
   useEffect(() => {
     fetch('/api/two')
@@ -13,12 +14,17 @@ export default function blogs() {
     })
   }, [])
 
-  console.log(message)
-
+  for (let i = 0; i < message.length; i++) {
+    console.log(message[i]) 
+    text += message[i]["blogi"] + "<br>";
+    document.getElementById("teksti").innerHTML = text;
+  }
+  
+  
   return (
     <main>
         <div>
-            <p>{message}</p>
+            <p id="teksti"></p>
         </div>
     </main>
   )

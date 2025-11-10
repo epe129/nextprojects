@@ -33,12 +33,10 @@ def two():
     data = []
     with open("data.json", "r+") as file:
         file_data = json.load(file)
-        # print(file_data)
-
         for value in file_data["blogit"]:
-            print(value["blogi"])
-            data.append(value["blogi"])
-
+            print(value)
+            data.append(value)
+    print(data)    
     return jsonify(data)
 
 

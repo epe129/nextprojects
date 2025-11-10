@@ -42,5 +42,18 @@
     background-color: rgb(83, 83, 83);
     border-radius: 5px;
     padding: 5px;
+}
 
+.title {
+    text-align: left;
+    float: left;
+    margin-top: 8.5px;
+}
+
+.titletext {
+    text-align: left;
+    float: left;
+    color: white;
+    padding-right: 4px;
+    font-size: 1.75rem;
 }
