@@ -1,34 +1,16 @@
 {
     "blogit": [
         {
-            "blogi": "sdf"
-        },
-        {
-            "blogi": "fgh\n"
-        },
-        {
-            "blogi": "ghj"
-        },
-        {
+            "title": "moi",
             "blogi": "asd"
         },
         {
-            "blogi": "dsf"
-        },
-        {
+            "title": "moi",
             "blogi": "asd"
         },
         {
-            "blogi": "asd"
-        },
-        {
-            "blogi": "sdf"
-        },
-        {
-            "blogi": "dfg"
-        },
-        {
-            "blogi": "asd"
+            "title": "moi",
+            "blogi": ""
         }
     ]
 }

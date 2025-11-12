@@ -15,6 +15,7 @@ def home():
         DataInThePage.append(data)
 
         TheBlogText = {
+            "title": f"{data["title"]}",
             "blogi" : f"{data["blogi"]}"
         }
         with open("data.json", "r+") as file:

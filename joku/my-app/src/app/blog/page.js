@@ -16,7 +16,7 @@ export default function blogs() {
 
   for (let i = 0; i < message.length; i++) {
     console.log(message[i]) 
-    text += message[i]["blogi"] + "<br>";
+    text += `Title: ${message[i]["title"]}` + "<br>" + `Blogi: ${message[i]["blogi"]}`+ "<br>";
     document.getElementById("teksti").innerHTML = text;
   }
   

@@ -6,6 +6,7 @@ import Link from 'next/link'
 
 export default function Home() {
   const [blogi, setBlogi] = useState('');
+  const [title, setTitle] = useState('');
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -14,7 +15,7 @@ export default function Home() {
     fetch('/api/home', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ blogi: `${blogi}` }),
+      body: JSON.stringify({ blogi: `${blogi}`, title: `${title}`}),
     })
   }
 
@@ -24,7 +25,7 @@ export default function Home() {
         <div className={style.div}>
           <h1 className={style.h1}>Write your blog</h1>
           <form className={style.form} onSubmit={handleSubmit}>
-            <label className={style.titletext}>title: </label><input className={style.title}></input>
+            <label className={style.titletext}>title: </label><input value={title} onChange={event => setTitle(event.target.value)} className={style.title}></input>
             <br></br>
             <textarea rows="4" cols="50" value={blogi} onChange={event => setBlogi(event.target.value)} autoComplete="off"></textarea>
             <br></br>
