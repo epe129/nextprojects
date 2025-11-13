@@ -25,7 +25,7 @@ export default function Home() {
         <div className={style.div}>
           <h1 className={style.h1}>Write your blog</h1>
           <form className={style.form} onSubmit={handleSubmit}>
-            <label className={style.titletext}>title: </label><input value={title} onChange={event => setTitle(event.target.value)} className={style.title}></input>
+            <label className={style.titletext}>Title: </label><input value={title} onChange={event => setTitle(event.target.value)} className={style.title}></input>
             <br></br>
             <textarea rows="4" cols="50" value={blogi} onChange={event => setBlogi(event.target.value)} autoComplete="off"></textarea>
             <br></br>
