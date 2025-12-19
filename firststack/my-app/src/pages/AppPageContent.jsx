@@ -25,8 +25,26 @@ function Eapp() {
 
   return (
     <>
+      <h1>Terve, lisää kirja tietokantaan</h1>
       <div>
-      <h1>Welcome</h1>
+        <form method="post" style={{ width: "180px"}}>
+          <label style={{ float: "left"}}>
+            kirjanimi: 
+          </label>
+          <input style={{ float: "left"}} name="myInput" placeholder="nimi" />
+          
+          <label style={{ float: "left"}}>
+            kirjakuvaus: 
+          </label>
+          <textarea style={{ float: "left"}} rows={10} cols={50} name="myInput" placeholder="kuvaus" />
+          
+          <label style={{ float: "left"}}>
+            kirjajulkaisupäivä: 
+          </label>
+          <input style={{ float: "left"}} type="date" placeholder="päivä" />
+          
+          <button style={{ float: "left"}} type="submit">Submit form</button>
+      </form>
       </div>
     </>
   )
