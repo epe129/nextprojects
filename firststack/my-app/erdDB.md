@@ -7,5 +7,6 @@ erDiagram
         string KirjanKuvaus
         date julkaispäivä
         string kirjantekijä
+        int hinta
     }
    
