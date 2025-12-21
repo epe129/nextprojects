@@ -50,8 +50,8 @@ def p():
     cursor.execute(f"INSERT INTO KIRJA (Kirjannimi, kirjantekija, KirjanKuvaus, julkaispaiva, hinta) VALUES ('{getData["nimi"]}', '{getData["tekija"]}','{getData["kuvaus"]}','{getData["maara"]}', '{getData["hinta"]}')")
 
     conn.commit()
-    conn.close()
 
+    conn.close()
 
     return jsonify({"message": "Hello from Flask!"})
 
