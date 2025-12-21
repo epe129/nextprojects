@@ -2,21 +2,12 @@ import React, { useState, useEffect } from "react";
 import { data } from "react-router-dom";
 
 function Eapp() {
-  const [message, setMessage] = useState("");
   const [nimi, setNimi] = useState("");
   const [kuvaus, setKuvaus] = useState("");
   const [maara, setMaara] = useState("");
   const [tekija, setTekija] = useState("");
   const [hinta, setHinta] = useState("");
   
-  useEffect(() => {
-    fetch("/api/hello")
-    .then((res) => res.json())
-    .then((data) => setMessage(data.message))
-  }, []);
-
-  console.log(message)
-
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(nimi, kuvaus, maara)

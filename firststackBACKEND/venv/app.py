@@ -1,4 +1,3 @@
-import os
 from flask import Flask, jsonify, request, render_template
 import sqlite3
 
@@ -26,11 +25,27 @@ def page():
     return render_template("index.html")
 
 @app.route("/api/hello", methods=["GET"])
-def hello():
-    return jsonify({"message": "Hello!"})
+def api1():
+    conn = sqlite3.connect('/home/lenni/home/koodit/nextprojects/firststackBACKEND/venv/db/kirjat.db')
+
+    cursor_obj = conn.cursor()
+
+    statement = '''SELECT * FROM KIRJA'''
+
+    cursor_obj.execute(statement)
+    
+    kirjat = []
+
+    output = cursor_obj.fetchall()        
+
+    for c in output:
+        kirjat.append(c)
+    
+    return jsonify(kirjat)
+
 
 @app.route("/api/post", methods=["POST"])
-def p():
+def api2():
     getData = request.json
 
     conn = sqlite3.connect('/home/lenni/home/koodit/nextprojects/firststackBACKEND/venv/db/kirjat.db')
