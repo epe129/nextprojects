@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-
-
 function First() {
   const [message, setMessage] = useState("");
 
@@ -15,35 +13,37 @@ function First() {
 
   for (let i = 0; i < message.length; i++) {
     renderedItems.push(<div style={{
-      width: "30%"
+      width: "30%",
+      margin: "0 auto"
     }} key={i}>
       
       <br/>
+      <br/>
 
-      <span style={{fontSize: "2rem"}}>Nimi: {message[i][0]}</span>
+      <span style={{fontSize: "2rem"}}><span style={{ fontWeight: "900"}}>Nimi:</span> {message[i][0]}</span>
       
       <br/>
       
-      <span style={{fontSize: "2rem"}}>tekija: {message[i][1]}</span>
+      <span style={{fontSize: "2rem"}}><span style={{ fontWeight: "900"}}>tekija:</span>{message[i][1]}</span>
       
       <br/>
       
-      <span style={{fontSize: "2rem"}}>kuvaus: {message[i][2]}</span>
+      <span style={{fontSize: "2rem"}}><span style={{ fontWeight: "900"}}>kuvaus:</span> {message[i][2]}</span>
       
       <br/>
       
-      <span style={{fontSize: "2rem"}}>päivämäärä: {message[i][3]}</span>
+      <span style={{fontSize: "2rem"}}><span style={{ fontWeight: "900"}}>päivämäärä:</span> {message[i][3]}</span>
       
       <br/>
       
-      <span style={{fontSize: "2rem"}}>hinta: {message[i][4]}</span>
+      <span style={{fontSize: "2rem"}}><span style={{ fontWeight: "900"}}>hinta:</span> {message[i][4]}€</span>
       
       </div>);
   }
   
   return (
     <>
-      <h1>hei, katso kirjoja tietokannasta</h1>
+      <h1 style={{ fontSize: "3rem" }}>hei, katso kirjoja tietokannasta</h1>
       <div style={{ float: "none", textAlign: "left"}}>
         {renderedItems}
       </div>

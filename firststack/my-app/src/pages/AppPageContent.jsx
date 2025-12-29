@@ -24,7 +24,7 @@ function Eapp() {
 
   return (
     <>
-      <h1>hei, lisää kirja tietokantaan</h1>
+      <h1 style={{ fontSize: "3rem" }}>hei, lisää kirja tietokantaan</h1>
 
       <div style={{display: "flex", margin: "0 auto", position: "absolute", left: "50%", right: "50%"}}>
         <form onSubmit={handleSubmit} style={{ width: "180px"}}>

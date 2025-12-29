@@ -6,6 +6,8 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
 def page():
+    data = []
+
     conn = sqlite3.connect('/home/lenni/home/koodit/nextprojects/firststackBACKEND/venv/db/kirjat.db')
 
     cursor_obj = conn.cursor()
@@ -17,13 +19,14 @@ def page():
     output = cursor_obj.fetchall()
     
     for row in output:
+        data.append(row)
         print(row)
 
     conn.commit()
 
     conn.close()
 
-    return render_template("index.html")
+    return render_template("index.html", data=data)
 
 @app.route("/api/hello", methods=["GET"])
 def api1():
