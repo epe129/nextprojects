@@ -2,7 +2,7 @@ function Hae () {
     return(
         <>
         <div style={{ textAlign: "center" }}>
-            <h1>Search movies</h1>
+            <h1>See movies and series</h1>
         </div>
         </>
     )

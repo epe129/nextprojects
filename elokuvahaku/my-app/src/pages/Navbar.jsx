@@ -5,10 +5,10 @@ const Navbar = () => (
     <nav>
       <ul style={{ listStyleType: "none", padding: 0 }}>
         <li style={{ float: "left", padding: "10px"}}>
-          <Link to="/">See movies</Link>
+          <Link to="/">Search movies</Link>
         </li>
         <li style={{ float: "left", padding: "10px"}}>
-          <Link to="/Search">Search movies</Link>
+          <Link to="/See">See movies</Link>
         </li>
       </ul>
     </nav>
